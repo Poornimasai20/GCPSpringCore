@@ -17,16 +17,17 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class GlobalExceptionHandling extends ResponseEntityExceptionHandler{
 	
-	@ExceptionHandler(IdNotFoundException.class)
-	public ResponseEntity<BookIdExceptionDetails> idNotFoundException(IdNotFoundException ex)
-	{
-		BookIdExceptionDetails response= new BookIdExceptionDetails();
-		 response.setErrorcode("NOT FOUND");
-		 response.setErrormsg(ex.getMessage());
-		 response.setTimestamp(LocalDateTime.now());
-		 
-		 return new ResponseEntity<BookIdExceptionDetails>(response,HttpStatus.NOT_FOUND);
-	}
+	
+	  @ExceptionHandler(IdNotFoundException.class) public
+	  ResponseEntity<BookIdExceptionDetails>
+	  idNotFoundException(IdNotFoundException ex) { BookIdExceptionDetails
+	  response= new BookIdExceptionDetails(); response.setErrorcode("NOT FOUND");
+	  response.setErrormsg(ex.getMessage());
+	  response.setTimestamp(LocalDateTime.now());
+	  
+	  return new
+	  ResponseEntity<BookIdExceptionDetails>(response,HttpStatus.NOT_FOUND); }
+	 
 	
 	
 

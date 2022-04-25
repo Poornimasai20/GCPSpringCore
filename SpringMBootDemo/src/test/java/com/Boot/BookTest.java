@@ -47,7 +47,8 @@ public class BookTest {
 	  collect(Collectors.toList())); 
 	  }
 		
-		  @Test public void saveuser() {
+		  @Test 
+		  public void saveuser() {
 		   Book book=new Book(12,"Spring","Vasukimam");
 		   when(repository.save(book)).thenReturn(book);
 		   assertEquals(book,service.addBook(book));

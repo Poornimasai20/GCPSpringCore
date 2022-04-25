@@ -54,10 +54,11 @@ public class BookController {
 				bookservice.updateBookId(book);
 				status="Successfully updated";
 			}
-			else
-			{
-				throw new IdNotFoundException("Given id its not available in database");
-			}
+			
+			  else { 
+				 
+				  throw new IdNotFoundException("Given id its not available in database"); }
+			 
 			return new ResponseEntity<String>(status, HttpStatus.OK);
 			
 		}
